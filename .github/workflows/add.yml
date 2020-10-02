@@ -24,7 +24,7 @@ jobs:
 
       - name: Show history
         run: |
-          $(git log --format='%h %s' -n 5) | while read line ; do
+          echo "$(git log --format='%h %s' -n 5)" | while read line ; do
             echo "- ${line}"
             echo "- ${line}" >> history.md
           done
